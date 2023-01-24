@@ -28,11 +28,15 @@ const App = () => {
           </li>
         </div>
       </nav>
-      <Routes>
-        <Route path="/" element={<TutorialsList />} />
-        <Route path="/add" element={<AddTutorial />} />
-        <Route path="/tutorials/:id" element={<Tutorial />} />
-      </Routes>
+
+      <div className="container mt-3">
+        <Routes>
+          <Route exact path="/" element={<TutorialsList />} />
+          <Route exact path="/tutorials" element={<TutorialsList />} />
+          <Route path="/add" element={<AddTutorial />} />
+          <Route path="/tutorials/:id" element={<Tutorial />} />
+        </Routes>
+      </div>
     </>
   );
 };
